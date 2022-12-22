@@ -12,13 +12,14 @@ import javax.swing.JPanel;
  *
  * @author baran
  */
-public class notList  implements CustomPanel{
+public class notListPanel  implements CustomPanel{
     private  JLabel label;
     private JPanel panel;
 
     public JLabel getLabel() {
         if(this.label==null){
-            label=new JLabel("baran");
+           this.label=new JLabel("baran");
+            this.label.setBounds(14, 23, 100, 30);
         }
         return label;
     }

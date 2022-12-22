@@ -5,9 +5,12 @@
 package GUİ_Action;
 
 import GUI.CustomPanel;
+import GUI.dersProgramiPanel;
+import GUI.dersSecmePanel;
 import GUI.mainWindow;
-import GUI.notList;
+import GUI.notListPanel;
 import GUI.ogrenciPanel;
+import GUI.sinavTarihleriPanel;
 import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,10 +24,7 @@ public class ogrenciAction implements ActionListener {
 
     private CustomPanel panel;
     private ogrenciPanel ogr;
-   
 
-
-     
     public ogrenciAction(ogrenciPanel ogr) {
         this.ogr = ogr;
     }
@@ -33,12 +33,35 @@ public class ogrenciAction implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == ogr.getNotList()) {
-           
-           panel = new notList();
-           ogr.getPanel2().add(panel.getPanel());
+
+            panel = new notListPanel();
+
+            ogr.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());
             ogr.getPanel2().repaint();
         }
+        if (e.getSource() == ogr.getSinavTarih()) {
+            panel = new sinavTarihleriPanel();
+            ogr.getPanel2().add(panel.getPanel());
+            //mw.getPanel2().add(panel.getPanel());
+            //mw.getPanel2().add(panel.getPanel());
+            ogr.getPanel2().repaint();
+        }
+        if (e.getSource() == ogr.getDersProgram()) {
+            panel = new dersProgramiPanel();
+            ogr.getPanel2().add(panel.getPanel());
+            //mw.getPanel2().add(panel.getPanel());
+            //mw.getPanel2().add(panel.getPanel());
+            ogr.getPanel2().repaint();
+        }
+        if (e.getSource() == ogr.getDersSecme()) {
+            panel = new dersSecmePanel();
+            ogr.getPanel2().add(panel.getPanel());
+            //mw.getPanel2().add(panel.getPanel());
+            //mw.getPanel2().add(panel.getPanel());
+            ogr.getPanel2().repaint();
+        }
+
     }
 }

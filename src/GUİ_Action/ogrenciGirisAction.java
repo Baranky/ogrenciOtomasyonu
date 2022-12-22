@@ -13,25 +13,30 @@ import java.awt.event.ActionListener;
  *
  * @author baran
  */
-public class ogrenciGirisAction implements  ActionListener{
-    private  CustomPanel Panel;
-    private  ogrenciGirisPanel ogr;
-   mainWindow mw;
-            public ogrenciGirisAction(ogrenciGirisPanel ogr){
-                this.ogr=ogr;
-                mw=new mainWindow();
-            }
+public class ogrenciGirisAction implements ActionListener {
+
+    private CustomPanel Panel;
+    private ogrenciGirisPanel ogr;
+
+    // mainWindow mw;
+    public ogrenciGirisAction(ogrenciGirisPanel ogr) {
+        this.ogr = ogr;
+        //mw=new mainWindow();
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==ogr.getGiris()){
-            System.out.println("GUİ_Action.ogrenciGirisAction.actionPerformed()");
-            Panel=new ogrenciPanel();
-            
-           mw.getWindow().setContentPane(Panel.getPanel());
-            mw.getWindow().repaint();
-       
-            
+        if (e.getSource() == ogr.getGiris()) {
+            Panel = new ogrenciPanel();
+            ogr.getPanel().setVisible(false);
+            ogr.getPanel().removeAll();
+            ogr.getPanel().add(Panel.getPanel());
+            ogr.getPanel().setVisible(true);
+            ogr.getPanel().repaint();
+            // mw.getWindow().setContentPane(Panel.getPanel());
+            //  mw.getWindow().repaint();
+
         }
     }
-    
+
 }

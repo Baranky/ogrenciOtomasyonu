@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 public class ogrenciPanel implements CustomPanel {
 
     private JPanel panel1, panel2, panel3;
-    private JButton notList, sinavTarih, dersSecme, dersProgram, transkript;
+    private JButton notList, sinavTarih, dersSecme, dersProgram;
 
     public JButton getNotList() {
         if (this.notList == null) {
@@ -37,6 +37,7 @@ public class ogrenciPanel implements CustomPanel {
         if (this.sinavTarih == null) {
             this.sinavTarih = new JButton("SİNAV TARİHLERİ");
             this.sinavTarih.setBounds(10, 100, 150, 40);
+            this.sinavTarih.addActionListener(new ogrenciAction(this));
         }
         return sinavTarih;
     }
@@ -49,6 +50,7 @@ public class ogrenciPanel implements CustomPanel {
         if (this.dersSecme == null) {
             this.dersSecme = new JButton("DERS SEC");
             this.dersSecme.setBounds(10, 200, 150, 40);
+            this.dersSecme.addActionListener(new ogrenciAction(this));
         }
         return dersSecme;
     }
@@ -61,6 +63,7 @@ public class ogrenciPanel implements CustomPanel {
         if (this.dersProgram == null) {
             this.dersProgram = new JButton("DERS PROGRAMİ");
             this.dersProgram.setBounds(10, 300, 150, 40);
+            this.dersProgram.addActionListener(new ogrenciAction(this));
         }
         return dersProgram;
     }
@@ -68,19 +71,6 @@ public class ogrenciPanel implements CustomPanel {
     public void setDersProgram(JButton dersProgram) {
         this.dersProgram = dersProgram;
     }
-
-    public JButton getTranskript() {
-        if (this.transkript == null) {
-            this.transkript = new JButton("TRANSKRİPT");
-            this.transkript.setBounds(10, 400, 150, 40);
-        }
-        return transkript;
-    }
-
-    public void setTranskript(JButton transkript) {
-        this.transkript = transkript;
-    }
-
     public JPanel getPanel1() {
         if (this.panel1 == null) {
             this.panel1 = new JPanel();
@@ -89,7 +79,6 @@ public class ogrenciPanel implements CustomPanel {
             this.panel1.add(getDersProgram());
             this.panel1.add(getDersSecme());
             this.panel1.add(getSinavTarih());
-            this.panel1.add(getTranskript());
             this.panel1.add(getNotList());
             this.panel1.setBackground(Color.red);
         }
