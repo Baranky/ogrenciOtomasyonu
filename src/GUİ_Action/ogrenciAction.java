@@ -35,7 +35,10 @@ public class ogrenciAction implements ActionListener {
         if (e.getSource() == ogr.getNotList()) {
 
             panel = new notListPanel();
-
+            ogr.getPanel2().setVisible(false);
+            ogr.getPanel2().removeAll();
+            ogr.getPanel2().setVisible(true);
+            ogr.getPanel2().repaint();
             ogr.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());
@@ -43,24 +46,37 @@ public class ogrenciAction implements ActionListener {
         }
         if (e.getSource() == ogr.getSinavTarih()) {
             panel = new sinavTarihleriPanel();
+            
+            ogr.getPanel2().setVisible(false);
+            ogr.getPanel2().removeAll();
+            ogr.getPanel2().setVisible(true);
+            ogr.getPanel2().repaint();
             ogr.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());
-            ogr.getPanel2().repaint();
+           
         }
         if (e.getSource() == ogr.getDersProgram()) {
             panel = new dersProgramiPanel();
+            ogr.getPanel2().setVisible(false);
+            ogr.getPanel2().removeAll();
+            ogr.getPanel2().setVisible(true);
+            ogr.getPanel2().repaint();
             ogr.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());
-            ogr.getPanel2().repaint();
+         
         }
         if (e.getSource() == ogr.getDersSecme()) {
+            ogr.getPanel2().setVisible(false);
+            ogr.getPanel2().removeAll();
+            ogr.getPanel2().setVisible(true);
+            ogr.getPanel2().repaint();
             panel = new dersSecmePanel();
             ogr.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());
-            ogr.getPanel2().repaint();
+    
         }
 
     }

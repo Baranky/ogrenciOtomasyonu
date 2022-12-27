@@ -1,4 +1,4 @@
-package ogrenciotomasyonu;
+package ogrenciOtomasyonu;
 
 public class akademi {
 

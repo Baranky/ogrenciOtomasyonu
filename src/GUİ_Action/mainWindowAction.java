@@ -35,14 +35,6 @@ public class mainWindowAction implements ActionListener {
             mw.getWindow().setContentPane(panel.getPanel());
             mw.getWindow().repaint();
         }
-        if (e.getSource() == mw.getYonetici()) {
-           
-        }
-
-        if (e.getSource() == mw.getPersonel()) {
-            panel = new personelPanel();
-           
-        }
 
     }
 }

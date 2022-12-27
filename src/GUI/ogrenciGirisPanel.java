@@ -21,7 +21,8 @@ public class ogrenciGirisPanel implements CustomPanel {
     private JTextField ogrenciNo;
     private JLabel userName, password;
     private JPasswordField sifre;
-
+   
+    
     @Override
     public JPanel getPanel() {
         if (this.Panel == null) {
@@ -100,5 +101,7 @@ public class ogrenciGirisPanel implements CustomPanel {
     public void setPassword(JLabel password) {
         this.password = password;
     }
+
+   
 
 }

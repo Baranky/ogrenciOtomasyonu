@@ -1,0 +1,6 @@
+veri yapıları#40#60#52#C3#
+olasilık#60#60#60#C2#
+program yapisi#70#60#64#C1#
+nesne tabanlı prog.#30#70#54#C3#
+sayisal analiz#80#60#68#C1#
+iş saglığı#30#60#48#F1#

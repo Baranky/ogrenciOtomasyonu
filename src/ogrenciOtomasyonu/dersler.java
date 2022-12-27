@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ogrenciotomasyonu;
+package ogrenciOtomasyonu;
 
 import java.util.Date;
 
@@ -11,8 +11,8 @@ import java.util.Date;
  * @author baran
  */
 public class dersler {
-    private String dersİd;
-    private akademi dersHoca;
+    private int dersİd;
+    private String dersHoca;
     private ogrenci dersOgr;
     private String dersAd;
     private Date saati;
@@ -21,19 +21,16 @@ public class dersler {
     public dersler() {
     }
 
-    public dersler(String dersİd, akademi dersHoca, ogrenci dersOgr, String dersAd, Date saati, int kredi) {
+    public dersler(int dersİd, String dersAd,String dersHoca) {
         this.dersİd = dersİd;
         this.dersHoca = dersHoca;
-        this.dersOgr = dersOgr;
         this.dersAd = dersAd;
-        this.saati = saati;
-        this.kredi = kredi;
     }
-    public akademi getDersHoca() {
+    public String getDersHoca() {
         return dersHoca;
     }
 
-    public void setDersHoca(akademi dersHoca) {
+    public void setDersHoca(String dersHoca) {
         this.dersHoca = dersHoca;
     }
 
@@ -68,12 +65,17 @@ public class dersler {
     public void setKredi(int kredi) {
         this.kredi = kredi;
     }
-    public String getDersİd() {
+    public int getDersİd() {
         return dersİd;
     }
 
-    public void setDersİd(String dersİd) {
+    public void setDersİd(int dersİd) {
         this.dersİd = dersİd;
+    }
+
+    @Override
+    public String toString() {
+        return    dersİd +"#" +dersAd + "#"+dersHoca+"# # #";
     }
 
 }

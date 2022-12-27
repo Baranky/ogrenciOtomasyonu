@@ -1,36 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package DAO;
 
-import java.util.List;
-import ogrenciotomasyonu.ogrenci;
+import java.io.IOException;
+import ogrenciOtomasyonu.ogrenci;
 
 /**
  *
  * @author baran
  */
-public class ogrenciDAO  implements  DAO<ogrenci>{
+public class ogrenciDAO extends DAO {
 
+    public void ekle(ogrenci ogr) throws IOException {
+        super.ekle(ogr);
+    }
     @Override
-    public void ekle(ogrenci entity) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public String [] sil(String dosya,String str) throws IOException{
+        String [] liste=super.sil(dosya, str);
+        return liste;
+        
     }
 
     @Override
-    public void sil(ogrenci entity) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public String[][] listele(String dosya) throws IOException {
+        String[][] liste = super.listele(dosya);
+        return liste;
     }
-
-    @Override
-    public void güncelle(ogrenci entity) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public List<ogrenci> listelle() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
+     public boolean dogrulama(String dosya, String username, String sifre) throws IOException {
+         boolean giris=super.dogrulama(dosya, username, sifre);
+        return giris;
+     
+     }
 }

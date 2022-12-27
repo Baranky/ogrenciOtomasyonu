@@ -4,39 +4,65 @@
  */
 package GUI;
 
+import DAO.notDAO;
+import ogrenciOtomasyonu.not;
 import java.awt.Color;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.*;
 
-/**
- *
- * @author baran
- */
 public class notListPanel  implements CustomPanel{
-    private  JLabel label;
     private JPanel panel;
-
-    public JLabel getLabel() {
-        if(this.label==null){
-           this.label=new JLabel("baran");
-            this.label.setBounds(14, 23, 100, 30);
+    private JTable table;
+    private JScrollPane Jsc;
+    notDAO notd;
+    not not;
+    String [][] data;
+      String baslik[]={"DERS AD", "VİZE(%40) ", "FİNAL(%60)","ORT.","HARF NOTU"};
+    public JTable getTable() {
+        if(this.table==null){
+            not=new not();
+            notd=new notDAO();
+            try {
+                data=notd.listele(not.getClass()+".txt");
+            } catch (IOException ex) {
+                Logger.getLogger(notListPanel.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.table=new JTable(data,baslik);
+            this.table.setBounds(0, 100, 400, 400);
+           
         }
-        return label;
+        return table;
     }
 
-    public void setLabel(JLabel label) {
-        this.label = label;
+    public void setTable(JTable table) {
+        this.table = table;
     }
+
+    public JScrollPane getJsc() {
+        if(this.Jsc==null){
+            this.Jsc=new JScrollPane(getTable());
+            this.Jsc.setBounds(0, 100, 380, 300);
+             this.Jsc.setVisible(true);
+        }
+        return Jsc;
+    }
+
+    public void setJsc(JScrollPane Jsc) {
+        this.Jsc = Jsc;
+    }
+    
     
     @Override
     public JPanel getPanel() {
         if(this.panel==null){
             this.panel=new JPanel();
-            this.panel.add(getLabel());
             this.panel.setSize(400, 600);
             this.panel.setBounds(0, 0, 400, 600);
+            this.panel.add(getJsc());
             this.panel.setLayout(null);
-            this.panel.setBackground(Color.green);
+            this.panel.setBackground(Color.orange);
             this.panel.setVisible(true);
         }
         return panel ;

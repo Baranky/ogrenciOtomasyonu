@@ -1,4 +1,4 @@
-package ogrenciotomasyonu;
+package ogrenciOtomasyonu;
 
 import java.net.IDN;
 
@@ -20,17 +20,17 @@ public class ogrenci  {
     public ogrenci() {
     }
 
-    public ogrenci(int okulNo, String adSoyad, int sinif, int id, int tc, String email, String telNo, String aldıgıDersler, String userName, String password) {
-        this.okulNo = okulNo;
+    public ogrenci( String adSoyad, int sinif, int id) {
+        //this.okulNo = okulNo;
         this.adSoyad = adSoyad;
         this.sinif = sinif;
         this.id = id;
-        this.tc = tc;
-        this.email = email;
-        this.telNo = telNo;
-        this.aldıgıDersler = aldıgıDersler;
-        this.userName = userName;
-        this.password = password;
+        //this.tc = tc;
+        //this.email = email;
+       // this.telNo = telNo;
+        //this.aldıgıDersler = aldıgıDersler;
+        //this.userName = userName;
+        //this.password = password;
     }
 
     public int getId() {
@@ -77,6 +77,26 @@ public class ogrenci  {
         this.aldıgıDersler = aldıgıDersler;
     }
 
+    public void setOkulNo(int okulNo) {
+        this.okulNo = okulNo;
+    }
+
+    public void setAdSoyad(String adSoyad) {
+        this.adSoyad = adSoyad;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setTelNo(String telNo) {
+        this.telNo = telNo;
+    }
+
     public String getUserName() {
         return userName;
     }
@@ -95,16 +115,8 @@ public class ogrenci  {
 
     @Override
     public String toString() {
-        return "okulNo=" + okulNo
-                + " adSoyad=" + adSoyad
-                + " sinif=" + sinif
-                + " id=" + id
-                + " tc=" + tc
-                + " email=" + email
-                + " telNo=" + telNo
-                + " aldigiDersler=" + aldıgıDersler
-                + " userName=" + userName
-                + " password=" + password;
+        return  sinif+"#"+adSoyad+"#"+ id+"# # #";   
+              
     }
 
 }

@@ -4,33 +4,18 @@
  */
 package DAO;
 
+import java.io.IOException;
 import java.util.List;
-import ogrenciotomasyonu.*;
 
 /**
  *
  * @author baran
  */
-public class notDAO implements DAO<not>{
-
-    @Override
-    public void ekle(not entity) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+public class notDAO extends DAO{
+ @Override
+    public String[][] listele(String dosya) throws IOException {
+        String[][] liste = super.listele(dosya);
+        return liste;
     }
 
-    @Override
-    public void sil(not entity) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void güncelle(not entity) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public List<not> listelle() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
 }

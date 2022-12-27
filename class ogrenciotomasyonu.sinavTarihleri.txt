@@ -1,0 +1,5 @@
+pazartesi#program yapisi#11:00# # #
+sali#veri yapılar#13:30# # #
+carşamba#sayisal analiz#14:00# # #
+perşembe#nesne tabanli prog.#10:30# # #
+cuma#iş sagligi#15:00# # #

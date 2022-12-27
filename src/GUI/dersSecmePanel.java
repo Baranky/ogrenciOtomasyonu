@@ -12,7 +12,6 @@ import javax.swing.JPanel;
  * @author baran
  */
 public class dersSecmePanel implements CustomPanel {
-
     private JPanel panel;
 
     @Override
@@ -22,7 +21,7 @@ public class dersSecmePanel implements CustomPanel {
         this.panel.setSize(400, 600);
         this.panel.setBounds(0, 0, 400, 600);
         this.panel.setLayout(null);
-        this.panel.setBackground(Color.gray);
+        this.panel.setBackground(Color.orange);
         this.panel.setVisible(true);
 
         return panel;

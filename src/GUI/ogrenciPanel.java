@@ -10,6 +10,7 @@ import java.awt.Color;
 import javax.management.NotificationListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 
 /**
  *
@@ -19,7 +20,7 @@ public class ogrenciPanel implements CustomPanel {
 
     private JPanel panel1, panel2, panel3;
     private JButton notList, sinavTarih, dersSecme, dersProgram;
-
+    
     public JButton getNotList() {
         if (this.notList == null) {
             this.notList = new JButton("NOT LİSTESİ");

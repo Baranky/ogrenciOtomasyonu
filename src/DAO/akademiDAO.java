@@ -4,33 +4,17 @@
  */
 package DAO;
 
-import java.util.List;
-import ogrenciotomasyonu.*;
+import java.io.IOException;
 
 /**
  *
  * @author baran
  */
-public class akademiDAO  implements  DAO<akademi>{
-
-    @Override
-    public void ekle(akademi entity) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void sil(akademi entity) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void güncelle(akademi entity) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public List<akademi> listelle() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+public class akademiDAO extends DAO{
+    public boolean dogrulama(String dosya, String username, String sifre) throws IOException {
+         boolean giris=super.dogrulama(dosya, username, sifre);
+        return giris;
+     
+     }
     
 }
