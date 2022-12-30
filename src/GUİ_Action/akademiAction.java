@@ -29,7 +29,6 @@ public class akademiAction implements ActionListener {
             ogr.getPanel2().setVisible(false);
             ogr.getPanel2().removeAll();
             ogr.getPanel2().setVisible(true);
-            ogr.getPanel2().repaint();
             ogr.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());

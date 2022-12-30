@@ -5,8 +5,8 @@
 package DAO;
 
 import java.io.IOException;
-import ogrenciOtomasyonu.dersler;
-import ogrenciOtomasyonu.ogrenci;
+import ogrenciOtomasyonu.*;
+
 
 
 public class dersDAO extends DAO{
@@ -20,7 +20,7 @@ public class dersDAO extends DAO{
         
     }
 
-   public String[] []listele(String dosya) throws IOException {
+   public String[][]listele(String dosya) throws IOException {
        String[][] liste = super.listele(dosya);
         return liste;
        

@@ -3,14 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package GUI;
-
-import GUİ_Action.akademiGirisAction;
 import GUİ_Action.ogrenciAction;
 import java.awt.Color;
-import javax.management.NotificationListener;
-import javax.swing.JButton;
-import javax.swing.JPanel;
-import javax.swing.JTable;
+import javax.swing.*;
 
 /**
  *
@@ -19,7 +14,7 @@ import javax.swing.JTable;
 public class ogrenciPanel implements CustomPanel {
 
     private JPanel panel1, panel2, panel3;
-    private JButton notList, sinavTarih, dersSecme, dersProgram;
+    private JButton notList, sinavTarih, dersProgram;
     
     public JButton getNotList() {
         if (this.notList == null) {
@@ -46,24 +41,10 @@ public class ogrenciPanel implements CustomPanel {
     public void setSinavTarih(JButton sinavTarih) {
         this.sinavTarih = sinavTarih;
     }
-
-    public JButton getDersSecme() {
-        if (this.dersSecme == null) {
-            this.dersSecme = new JButton("DERS SEC");
-            this.dersSecme.setBounds(10, 200, 150, 40);
-            this.dersSecme.addActionListener(new ogrenciAction(this));
-        }
-        return dersSecme;
-    }
-
-    public void setDersSecme(JButton dersSecme) {
-        this.dersSecme = dersSecme;
-    }
-
     public JButton getDersProgram() {
         if (this.dersProgram == null) {
             this.dersProgram = new JButton("DERS PROGRAMİ");
-            this.dersProgram.setBounds(10, 300, 150, 40);
+            this.dersProgram.setBounds(10, 200, 150, 40);
             this.dersProgram.addActionListener(new ogrenciAction(this));
         }
         return dersProgram;
@@ -78,7 +59,7 @@ public class ogrenciPanel implements CustomPanel {
             this.panel1.setBounds(0, 0, 200, 600);
             this.panel1.setLayout(null);
             this.panel1.add(getDersProgram());
-            this.panel1.add(getDersSecme());
+       
             this.panel1.add(getSinavTarih());
             this.panel1.add(getNotList());
             this.panel1.setBackground(Color.red);

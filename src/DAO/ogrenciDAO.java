@@ -8,7 +8,7 @@ import ogrenciOtomasyonu.ogrenci;
  * @author baran
  */
 public class ogrenciDAO extends DAO {
-
+    
     public void ekle(ogrenci ogr) throws IOException {
         super.ekle(ogr);
     }

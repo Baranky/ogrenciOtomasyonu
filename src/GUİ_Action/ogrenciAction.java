@@ -4,17 +4,9 @@
  */
 package GUİ_Action;
 
-import GUI.CustomPanel;
-import GUI.dersProgramiPanel;
-import GUI.dersSecmePanel;
-import GUI.mainWindow;
-import GUI.notListPanel;
-import GUI.ogrenciPanel;
-import GUI.sinavTarihleriPanel;
-import java.awt.Label;
+import GUI.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JLabel;
 
 /**
  *
@@ -66,17 +58,6 @@ public class ogrenciAction implements ActionListener {
             //mw.getPanel2().add(panel.getPanel());
             //mw.getPanel2().add(panel.getPanel());
          
-        }
-        if (e.getSource() == ogr.getDersSecme()) {
-            ogr.getPanel2().setVisible(false);
-            ogr.getPanel2().removeAll();
-            ogr.getPanel2().setVisible(true);
-            ogr.getPanel2().repaint();
-            panel = new dersSecmePanel();
-            ogr.getPanel2().add(panel.getPanel());
-            //mw.getPanel2().add(panel.getPanel());
-            //mw.getPanel2().add(panel.getPanel());
-    
         }
 
     }
